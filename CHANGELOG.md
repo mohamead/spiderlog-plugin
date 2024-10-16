@@ -4,6 +4,13 @@
 
 ## [Unreleased]
 
+## [0.0.10] - 2024-10-16
+
+### Changed
+- Repo-name to spiderlog-plugin
+- PluginUntilBuild to 242.*
+- pluginSinceBuild to 233
+
 ## [0.0.9] - 2024-04-09
 ### Fixed
 - Clear action to include removing value from ColumnIdentifiers
@@ -31,18 +38,18 @@
 - StandardCharsets to UTF_8 when reading file
 
 ### Added
-- Support for .out and .txt file extensions 
+- Support for .out and .txt file extensions
 
 ## [0.0.5] - 2022-09-29
 ### Changed
 - PluginUntilBuild to 222.*
 - Clean up misc
 
-### Added 
+### Added
 - Font selection to include all available font(s) on OS
 
 ## [0.0.4] - 2022-05-30
-### Fix 
+### Fix
 - Update of settings
 
 ## [0.0.3] - 2022-05-16
@@ -51,7 +58,7 @@
 - Clean up misc
 
 ### Added
-- Update of font-name, font-type and font-size in setting view  
+- Update of font-name, font-type and font-size in setting view
 
 ## [0.0.2] - 2022-05-01
 ### Changed
@@ -65,6 +72,6 @@
 ### Added
 - Setting(s) for spiderlog
 - Operation(s) for scrolling to top and end of window
-- Operation(s) for reading, updating and clearing .log file (content) to / from window  
-- Window with toolbar 
+- Operation(s) for reading, updating and clearing .log file (content) to / from window
+- Window with toolbar
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)

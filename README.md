@@ -1,11 +1,11 @@
 # ![spiderlog](./src/main/resources/META-INF/pluginIcon.svg) <span style="color:#AB7C94">Spiderlog</span>
 
-![Build](https://github.com/mohamead/spiderlog/workflows/Build/badge.svg)
+![Build](https://github.com/mohamead/spiderlog-plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/18952-spiderlog.svg)](https://plugins.jetbrains.com/plugin/18952-spiderlog)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/18952-spiderlog.svg)](https://plugins.jetbrains.com/plugin/18952-spiderlog)
 
 <!-- Plugin description -->
-Simple log file viewer plugin with the following feature(s): Open any .log, .out or .txt file. Force refresh of file. 
+Simple log file viewer plugin with the following feature(s): Open any .log, .out or .txt file. Force refresh of file.
 Scroll to top and end of file. Clear file.
 <!-- Plugin description end -->
 
