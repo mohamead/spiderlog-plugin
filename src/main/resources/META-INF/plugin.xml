@@ -10,7 +10,7 @@
                     icon="com.github.mohamead.spiderlog.plugin.icons.SpiderlogIcons.spiderlog" anchor="bottom"/>
         <applicationConfigurable parentId="tools" id="Spiderlog.Application.Settings"
                                  instance="com.github.mohamead.spiderlog.plugin.setting.SettingConfigurable"
-                                 displayName="Spiderlog" />
+                                 displayName="Spiderlog"/>
         <applicationService serviceImplementation="com.github.mohamead.spiderlog.plugin.setting.SettingState"/>
 
     </extensions>
@@ -21,6 +21,13 @@
                 icon="com.github.mohamead.spiderlog.plugin.icons.SpiderlogIcons.spiderlog">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </action>
+
+        <action id="Spiderlog.GroupedActions.ShowLogIn" class="com.github.mohamead.spiderlog.plugin.action.ShowLogInAction"
+                text="Show Log in Spiderlog"
+                icon="com.github.mohamead.spiderlog.plugin.icons.SpiderlogIcons.spiderlog">
+            <add-to-group group-id="HelpMenu" anchor="after" relative-to-action="ShowLog"/>
+        </action>
+
     </actions>
 
 </idea-plugin>

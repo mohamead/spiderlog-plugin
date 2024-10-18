@@ -2,6 +2,7 @@ package com.github.mohamead.spiderlog.plugin.util
 
 import com.github.mohamead.spiderlog.plugin.ui.SpiderlogPanel
 import com.intellij.openapi.actionSystem.ActionManager
+import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.fileChooser.FileChooser
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
@@ -12,12 +13,21 @@ import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowManager
 import com.intellij.openapi.wm.WindowManager
 import com.intellij.ui.table.JBTable
+import java.awt.EventQueue
 import java.awt.Window
 import java.io.File
 import java.nio.file.Path
 import javax.swing.table.DefaultTableModel
 
 internal val validExtension: List<String> = listOf("log", "out", "txt")
+
+internal fun open(project: Project, file: File) {
+    getToolWindow(project).show()
+    val toolWindowPanel = getToolWindowPanel(project)
+    toolWindowPanel.table.clearContent()
+
+    EventQueue.invokeLater { LogTracer().display(toolWindowPanel, file) }
+}
 
 internal fun openPath(project: Project, title: String, description: String): Path? {
     val fileDescriptor = FileChooserDescriptorFactory.createSingleFileDescriptor()
