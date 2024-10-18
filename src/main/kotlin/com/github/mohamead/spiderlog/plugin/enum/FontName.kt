@@ -8,7 +8,7 @@ internal enum class FontName(val value: String, val index: Int) {
     companion object {
 
         internal fun findByIndex(index: Int): FontName {
-            return values().firstOrNull { it.index == index }
+            return entries.firstOrNull { it.index == index }
                 ?: throw NoSuchElementException("FontName with index '$index' not found.")
         }
 

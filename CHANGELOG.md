@@ -6,7 +6,11 @@
 
 ## [0.0.10] - 2024-10-16
 
+### Fixed
+- Copy value from table
+
 ### Changed
+- Clean misc
 - Repo-name to spiderlog-plugin
 - PluginUntilBuild to 242.*
 - pluginSinceBuild to 233

@@ -1,18 +1,19 @@
 package com.github.mohamead.spiderlog.plugin.action
 
+import com.github.mohamead.spiderlog.plugin.ui.SpiderlogPanel
 import com.github.mohamead.spiderlog.plugin.util.clearContent
-import com.github.mohamead.spiderlog.plugin.util.getToolWindowPanel
 import com.intellij.openapi.actionSystem.AnActionEvent
+import javax.swing.Icon
 import javax.swing.table.DefaultTableModel
 
-internal class ClearAction : SpiderlogAction() {
+internal class ClearAction(val spiderlogPanel: SpiderlogPanel, override val icon: Icon?) : SpiderlogAction(icon) {
 
     override fun actionPerformed(e: AnActionEvent) {
-        val table = getToolWindowPanel(e.project!!).table
-        table.clearContent()
-        if (table.model is DefaultTableModel) {
-            val model = table.model as DefaultTableModel
-            model.setColumnIdentifiers(arrayOf())
+        spiderlogPanel.table.apply {
+            clearContent()
+            if (model is DefaultTableModel) {
+                (model as DefaultTableModel).setColumnIdentifiers(arrayOf())
+            }
         }
     }
 

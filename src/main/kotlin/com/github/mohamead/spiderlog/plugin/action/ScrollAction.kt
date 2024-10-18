@@ -1,13 +1,13 @@
 package com.github.mohamead.spiderlog.plugin.action
 
 import com.github.mohamead.spiderlog.plugin.enum.Direction
-import com.github.mohamead.spiderlog.plugin.util.getToolWindowPanel
-import com.intellij.openapi.project.Project
+import com.github.mohamead.spiderlog.plugin.ui.SpiderlogPanel
+import javax.swing.Icon
 
-internal abstract class ScrollAction : SpiderlogAction() {
+internal abstract class ScrollAction(open val spiderlogPanel: SpiderlogPanel, override val icon: Icon?) : SpiderlogAction(icon) {
 
-    protected fun scrollTo(project: Project, direction: Direction) {
-        val table = getToolWindowPanel(project).table
+    protected fun scrollTo(direction: Direction) {
+        val table = spiderlogPanel.table
         val rowIndex = when (direction) {
             Direction.END -> table.rowCount - 1
             Direction.TOP -> 0

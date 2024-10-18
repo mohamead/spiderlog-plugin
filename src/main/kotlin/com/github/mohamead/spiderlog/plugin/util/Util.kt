@@ -1,6 +1,6 @@
 package com.github.mohamead.spiderlog.plugin.util
 
-import com.github.mohamead.spiderlog.plugin.ui.SpiderlogToolWindowPanel
+import com.github.mohamead.spiderlog.plugin.ui.SpiderlogPanel
 import com.intellij.openapi.actionSystem.ActionManager
 import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.fileChooser.FileChooser
@@ -30,8 +30,8 @@ internal fun openPath(project: Project, title: String, description: String): Pat
     return file?.toNioPath()
 }
 
-internal fun getToolWindowPanel(project: Project): SpiderlogToolWindowPanel {
-    return getToolWindow(project).contentManager.getContent(0)!!.component as SpiderlogToolWindowPanel
+internal fun getToolWindowPanel(project: Project): SpiderlogPanel {
+    return getToolWindow(project).contentManager.getContent(0)!!.component as SpiderlogPanel
 }
 
 internal fun getToolWindow(project: Project): ToolWindow {
