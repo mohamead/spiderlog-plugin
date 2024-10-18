@@ -9,7 +9,8 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import java.awt.EventQueue
 import javax.swing.Icon
 
-internal class OpenFileAction(val spiderlogPanel: SpiderlogPanel, override val icon: Icon?) : SpiderlogAction(icon) {
+internal class OpenFileAction(private val spiderlogPanel: SpiderlogPanel, toolTip: String, icon: Icon?) :
+    SpiderlogAction(toolTip, icon) {
 
     override fun actionPerformed(e: AnActionEvent) {
         val extension = validExtension.joinToString("|")

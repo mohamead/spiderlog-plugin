@@ -5,7 +5,8 @@ import com.github.mohamead.spiderlog.plugin.ui.SpiderlogPanel
 import com.intellij.openapi.actionSystem.AnActionEvent
 import javax.swing.Icon
 
-internal class ScrollToTopAction(spiderlogPanel: SpiderlogPanel, icon: Icon) : ScrollAction(spiderlogPanel, icon) {
+internal class ScrollToTopAction(spiderlogPanel: SpiderlogPanel, toolTip: String, icon: Icon) :
+    ScrollAction(spiderlogPanel, toolTip, icon) {
 
     override fun actionPerformed(e: AnActionEvent) = scrollTo(Direction.TOP)
 

@@ -22,11 +22,11 @@ internal class SpiderlogPanel : BaseSpiderlogPanel() {
 
     init {
         val defaultActionGroup = DefaultActionGroup().apply {
-            add(OpenFileAction(this@SpiderlogPanel, AddFile))
-            add(ForceRefreshAction(this@SpiderlogPanel, ForceRefresh))
-            add(ScrollToTopAction(this@SpiderlogPanel, Scroll_up))
-            add(ScrollToEndAction(this@SpiderlogPanel, Scroll_down))
-            add(ClearAction(this@SpiderlogPanel, Remove))
+            add(OpenFileAction(this@SpiderlogPanel, "Open File", AddFile))
+            add(ForceRefreshAction(this@SpiderlogPanel, "Force Refresh", ForceRefresh))
+            add(ScrollToTopAction(this@SpiderlogPanel, "Scroll to Top", Scroll_up))
+            add(ScrollToEndAction(this@SpiderlogPanel, "Scroll to End", Scroll_down))
+            add(ClearAction(this@SpiderlogPanel, "Clear", Remove))
         }
         this.toolbar = buildToolbar(defaultActionGroup).component
         this.table = buildTable()

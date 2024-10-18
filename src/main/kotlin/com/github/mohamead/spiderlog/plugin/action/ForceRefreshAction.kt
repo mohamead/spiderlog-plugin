@@ -6,14 +6,12 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import java.awt.EventQueue
 import java.io.File
 import javax.swing.Icon
-import javax.swing.table.DefaultTableModel
 
-internal class ForceRefreshAction(val spiderlogPanel: SpiderlogPanel, override val icon: Icon?) : SpiderlogAction(icon) {
+internal class ForceRefreshAction(spiderlogPanel: SpiderlogPanel, toolTip: String, icon: Icon?) :
+    TableAction(spiderlogPanel, toolTip, icon) {
 
     override fun actionPerformed(e: AnActionEvent) {
-        val model = spiderlogPanel.table.model ?: return
-        val defaultTableModel = model as DefaultTableModel
-        val filePath = defaultTableModel.getColumnName(0) ?: return
+        val filePath = spiderlogPanel.table.model.getColumnName(0)
         val file = File(filePath)
         EventQueue.invokeLater { LogTracer().display(spiderlogPanel, file) }
     }

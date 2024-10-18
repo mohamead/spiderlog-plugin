@@ -8,13 +8,9 @@ import javax.swing.SwingWorker
 import javax.swing.table.DefaultTableModel
 import javax.swing.table.TableModel
 
-internal class LogWorker(file: File, model: DefaultTableModel) : SwingWorker<TableModel, String>() {
-    private val file: File
-    private val model: DefaultTableModel
+internal class LogWorker(private val file: File, private val model: DefaultTableModel) : SwingWorker<TableModel, String>() {
 
     init {
-        this.file = file
-        this.model = model
         model.setColumnIdentifiers(arrayOf<String>(file.absolutePath))
     }
 

@@ -31,7 +31,7 @@ internal class SettingComponent {
             cBoxFontName.addItem(fontName)
         }
         //Style
-        for (fontStyle in FontStyle.values()) {
+        for (fontStyle in FontStyle.entries) {
             cBoxFontStyle.addItem(fontStyle.name)
         }
         //Size

@@ -4,6 +4,15 @@
 
 ## [Unreleased]
 
+## [0.0.11] - 2024-10-18
+
+### Added
+- Feature for opening idea.log
+- Feature for disabling table button(s) when table is empty
+
+### Changed
+- Clean misc
+
 ## [0.0.10] - 2024-10-16
 
 ### Fixed

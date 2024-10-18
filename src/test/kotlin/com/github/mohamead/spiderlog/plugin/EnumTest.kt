@@ -14,7 +14,7 @@ class EnumTest {
     fun fontNameTest() {
         assertAll(
             { assertEquals(3, FontName.values().size) },
-            { assertThrows<NoSuchElementException> { FontName.findByIndex(3) }}
+            { assertThrows<NoSuchElementException> { FontName.findByIndex(3) } }
         )
     }
 
@@ -22,7 +22,7 @@ class EnumTest {
     fun fontStyleTest() {
         assertAll(
             { assertEquals(3, FontStyle.values().size) },
-            { assertThrows<NoSuchElementException> { FontStyle.findByIndex(3) }}
+            { assertThrows<NoSuchElementException> { FontStyle.findByIndex(3) } }
         )
     }
 

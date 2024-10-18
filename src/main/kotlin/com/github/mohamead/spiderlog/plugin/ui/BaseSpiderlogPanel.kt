@@ -20,9 +20,6 @@ internal abstract class BaseSpiderlogPanel : SimpleToolWindowPanel(false) {
         return ActionManager.getInstance()
             .createActionToolbar("Spiderlog Navigator Toolbar", defaultActionGroup, false)
             .apply {
-                layoutPolicy = ActionToolbar.AUTO_LAYOUT_POLICY
-                adjustTheSameSize(true)
-                setShowSeparatorTitles(true)
                 targetComponent = this@BaseSpiderlogPanel
             }
     }

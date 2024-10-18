@@ -30,6 +30,12 @@ This will result in the spiderlog view being open with the file content present.
 
 ![Image Alt text](/images/Spiderlog_2.png)
 
+We can also show the `idea.log` file in spiderlog by using:
+
+<kbd>Help</kbd> > <kbd>Show Log in Spiderlog </kbd>
+
+![Image Alt text](/images/Spiderlog_3.png)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

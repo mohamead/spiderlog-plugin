@@ -1,9 +1,6 @@
 package com.github.mohamead.spiderlog.plugin.util
 
 import com.github.mohamead.spiderlog.plugin.ui.SpiderlogPanel
-import com.intellij.openapi.actionSystem.ActionManager
-import com.intellij.openapi.actionSystem.CommonDataKeys
-import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.fileChooser.FileChooser
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 import com.intellij.openapi.project.Project
@@ -48,7 +45,7 @@ internal fun getToolWindow(project: Project): ToolWindow {
     return ToolWindowManager.getInstance(project).getToolWindow("Spiderlog")!!
 }
 
-internal fun getProject() : Project {
+internal fun getProject(): Project {
     val projects = ProjectManager.getInstance().openProjects
     var activeProject: Project? = null
     for (project in projects) {
@@ -60,15 +57,9 @@ internal fun getProject() : Project {
     return activeProject!!
 }
 
-internal fun getActionGroup(actionId: String): DefaultActionGroup {
-    return ActionManager.getInstance().getAction(actionId) as DefaultActionGroup
-}
-
 internal fun JBTable.clearContent() {
-    val model = this.model ?: return
-    val filePath = model.getColumnName(0) ?: return
-    val file = File(filePath)
-    if (!file.isFile || model !is DefaultTableModel) return
+    if (model == null) return
+    val model = this.model as DefaultTableModel
     model.setColumnIdentifiers(arrayOf())
     model.dataVector.removeAllElements()
     model.fireTableDataChanged()
