@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+## [0.0.12] - 2024-11-22
+
+### Changed
+- Remove PluginUntilBuild
+
 ## [0.0.11] - 2024-10-18
 
 ### Added

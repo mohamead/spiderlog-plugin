@@ -9,8 +9,8 @@ import com.intellij.openapi.components.Storage
 import com.intellij.util.xmlb.XmlSerializerUtil
 
 @State(
-    name = "com.github.mohamead.spiderlog.settings.SpiderlogSettingsState",
-    storages = [Storage("SdkSettingsPlugin.xml")]
+    name = "com.github.mohamead.spiderlog.settings.SettingsState",
+    storages = [Storage("spiderlog.xml")]
 )
 internal class SettingState : PersistentStateComponent<SettingState> {
 
