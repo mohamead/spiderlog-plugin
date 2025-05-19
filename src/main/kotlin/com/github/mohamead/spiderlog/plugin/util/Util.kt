@@ -27,7 +27,7 @@ internal fun open(project: Project, file: File) {
 }
 
 internal fun openPath(project: Project, title: String, description: String): Path? {
-    val fileDescriptor = FileChooserDescriptorFactory.createSingleFileDescriptor()
+    val fileDescriptor = FileChooserDescriptorFactory.singleFile()
     fileDescriptor.withTitle(title)
     fileDescriptor.withDescription(description)
     fileDescriptor.withShowFileSystemRoots(true)
