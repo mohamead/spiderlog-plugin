@@ -4,11 +4,6 @@
 
 ## [Unreleased]
 
-## [0.0.13] - 2025-05-19
-
-### Changed
-- Version of pluginVersion and kotlin
-
 ## [0.0.12] - 2024-11-22
 
 ### Changed
