@@ -31,8 +31,8 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
-    testImplementation("io.kotest:kotest-assertions-core-jvm:5.9.1")
-    testImplementation("io.kotest:kotest-runner-junit5-jvm:5.9.1")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:6.0.4")
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:6.0.4")
     testImplementation(libs.junit)
 
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
